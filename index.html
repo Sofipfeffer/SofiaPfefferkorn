@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Pfefferkorn - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Parkinsans:wght@300..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/Foto-saludo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-content">
+            <img src="assets/Foto-saludo.png" alt="Foto de perfil" class="profile-img">
+            <h1>¡Bienvenid@! Soy <span>Sofía Pfefferkorn.</span> Creatividad en cada pixel.</h1>
+            <!--input type="text" placeholder="Buscar proyectos..." class="search-bar"-->
+        </div>
+    </header>
+
+    <!-- Filtros -->
+    <nav id="filters">
+        <button data-category="all" class="filter active">Todos</button>
+        <button data-category="logos" class="filter">Logos</button>
+        <button data-category="identidades" class="filter">Identidades
+            Visuales</button>
+        <button data-category="redes" class="filter">Redes Sociales</button>
+        <button data-category="web" class="filter">Páginas Web</button>
+    </nav>
+
+    <!-- Galería de Proyectos -->
+    <main id="gallery">
+        <!-- Logos -->
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-dharma.png" alt="L-dharma">
+            <p>Logo para estudio de yoga y pilates.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-disarg.png" alt="L-disarg">
+            <p>Logo para empresa de tecnologia.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-gastrosierra.png" alt="L-gastrosierra">
+            <p>Logo para local de fiambres y embutidos.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-rochelle.png" alt="L-rochelle">
+            <p>Logo para empresa de ascensores.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-seduccion.png" alt="L-seduccion">
+            <p>Logo para emprendimiento de juguetes sexuales y batas.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-sweetpop.png" alt="L-sweetpop">
+            <p>Logo para heladeria.</p>
+        </div>
+        <div class="project" data-category="logos">
+            <img src="assets/img/L-topfundas.png" alt="L-topfundas">
+            <p>Logo para local de fundas y accesorios.</p>
+        </div>
+
+        <!-- Páginas Web -->
+        <div class="project" data-category="web">
+            <img src="assets/img/PW-harrypotter.png" alt="Página Web Harry potter">
+            <p>Diseño web proyecto Harry potter. </p>
+        </div>
+        <div class="project" data-category="web">
+            <img src="assets/img/PW-rochelle.png" alt="Página Web Rochelle Ascensores">
+            <p>Landing page para Rochelle Ascensores.</p>
+        </div>
+
+        <!-- Identidades Visuales -->
+
+        <div class="project carousel" data-category="identidades">
+            <div class="carousel-images">
+                <img src="assets/img/ID-bond.png" alt="Slide 1">
+                <img src="assets/img/ID-bond – 1.png" alt="Slide 2">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <p>Identidad para Bond</p>
+        </div>
+        <div class="project carousel" data-category="identidades">
+            <div class="carousel-images">
+                <img src="assets/img/ID-tiendamagia1.png" alt="Slide 1">
+                <img src="assets/img/ID-Tiendamagia2.png" alt="Slide 2">
+                <img src="assets/img/ID-Tiendamagia3.png" alt="Slide 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <p>Identidad para Tienda Magia</p>
+        </div>
+
+
+        <!-- Redes Sociales -->
+        <div class="project" data-category="redes">
+            <img src="assets/img/SM-CTPPM.png" alt="Redes Sociales 1">
+            <p>Redes de Colegio Traductores Públicos de la Provincia de Mendoza.</p>
+        </div>
+        <div class="project" data-category="redes">
+            <img src="assets/img/SM-Karina.png" alt="Redes Sociales 2">
+            <p>Contenido para Karina Grimaldi</p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+:root {
+    /* Colores principales */
+    --color-background: #F0EEE1;
+    --color-text: #0B294E;
+    --color-special: #00D2F1;
+
+    /* Fuentes */
+    --font-family-main: "Parkinsans", sans-serif;
+    /* Fuente principal */
+    --font-family-secondary: "Philosopher", sans-serif;
+    /* Fuente secundaria */
+
+}
+
+body {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: #f8f8f8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #000c1b;
+}
+
+header h1 {
+    color: var(--color-background);
+    font-style: normal;
+    font-weight: 100;
+}
+
+header h1 span {
+    color: var(--color-special);
+    font-weight: 500;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#filters {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.filter {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+#gallery {
+    position: relative;
+    column-count: 4;
+    /* Número de columnas */
+    column-gap: 20px;
+    /* Espacio entre columnas */
+    padding: 20px;
+}
+
+.project {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    /* Evita que las imágenes se rompan en medio de una columna */
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Esto asegura que la imagen ocupe toda la celda sin deformarse */
+    border-radius: 8px;
+}
+
+
+
+.project p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Estilo general para el carrusel dentro del #gallery */
+.carousel {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Contenedor de imágenes en el carrusel */
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* Imágenes del carrusel */
+.carousel-images img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botones de navegación */
+.carousel .prev,
+.carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+/* Indicadores (opcional) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: white;
+}
+
+
+/* Responsive: cuando la pantalla sea menor a 768px, cambiar a 2 columnas */
+@media (max-width: 380px) {
+    #gallery {
+        column-count: 2;
+        /* Dos columnas en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 12px;
+        width: 80%;
+    }
+
+    #filters {
+        gap: 5px;
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsive: cuando la pantalla sea menor a 480px, cambiar a 1 columna */
+@media (max-width: 280px) {
+    #gallery {
+        column-count: 1;
+        /* Una columna en pantallas muy pequeñas */
+    }
+}
