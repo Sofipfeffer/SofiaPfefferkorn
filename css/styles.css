@@ -197,7 +197,7 @@ header h2 span {
 
 
 /* Responsive: cuando la pantalla sea menor a 768px, cambiar a 2 columnas */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     #gallery {
         column-count: 2;
         column-gap: 5px;
