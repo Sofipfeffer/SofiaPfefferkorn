@@ -120,6 +120,11 @@ header h2 span {
     font-size: 14px;
 }
 
+.project p span,
+.carousel p span {
+    font-weight: 500;
+}
+
 /* Estilo general para el carrusel dentro del #gallery */
 .carousel {
     display: inline-block;
@@ -192,7 +197,7 @@ header h2 span {
 
 
 /* Responsive: cuando la pantalla sea menor a 768px, cambiar a 2 columnas */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     #gallery {
         column-count: 2;
         column-gap: 5px;
@@ -204,10 +209,10 @@ header h2 span {
     }
 
     .project p {
-        margin-top: 0px;
+        margin-top: 3px;
         line-height: 100%;
         font-size: 12px;
-        margin-bottom: 0px;
+        margin-bottom: 3px;
     }
 
     .carousel p {
